@@ -1,6 +1,6 @@
 from ursina import *
-from Dirt import Dirt
-from Player import Player
+from blocks.Dirt import Dirt
+from entities.Player import Player
 
 def main():
     app = Ursina()
