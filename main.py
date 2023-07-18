@@ -1,8 +1,9 @@
 from ursina import *
 from Block import Block
+from Dirt import Dirt
 
 app = Ursina()
 
-block=Block()
+dirt=Dirt()
 
 app.run()
