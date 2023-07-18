@@ -4,6 +4,7 @@ class Block(Entity):
     def __init__(self):
         super().__init__()
         self.model='cube'
+        self.collider='box'
         self.texture='assets/missing.png'
         self.position=(0,0,0)
         self.rotation=(0,0,0)
