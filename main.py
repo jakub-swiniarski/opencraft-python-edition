@@ -14,6 +14,8 @@ def main():
     mouse.visible=False
     mouse.locked=True
 
+    camera.fov=90
+
     player=Player()
 
     dirt=Dirt()
