@@ -19,4 +19,5 @@ class Player(Entity):
         camera.z=self.position.z
 
     def input(self,key):
-        pass
+        if key=='escape':
+            quit()

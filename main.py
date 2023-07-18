@@ -11,6 +11,9 @@ def main():
     window.exit_button.visible = False
     #window.fps_counter.enabled = False
 
+    mouse.visible=False
+    mouse.locked=True
+
     player=Player()
 
     dirt=Dirt()
