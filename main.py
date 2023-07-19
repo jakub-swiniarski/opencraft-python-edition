@@ -11,7 +11,7 @@ def main():
     window.exit_button.visible = False
     #window.fps_counter.enabled = False
 
-    player=Player(0,1,0)
+    player=Player()
 
     dirt=[]
     for i in range(21):
