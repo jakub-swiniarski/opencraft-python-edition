@@ -13,7 +13,7 @@ class Player(Entity):
         camera.rotation = (0,0,0)
         camera.fov = 90
         mouse.locked = True
-        self.mouse_sensitivity = 40
+        self.mouse_sensitivity = 75
 
         self.gravity = 1
         self.grounded = False
@@ -87,6 +87,8 @@ class Player(Entity):
     def input(self, key):
         if key == 'space':
             self.jump()
+        if key == 'escape':
+            quit()
 
     def jump(self):
         if not self.grounded:
