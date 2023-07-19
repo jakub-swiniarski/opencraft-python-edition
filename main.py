@@ -14,7 +14,7 @@ def main():
 
     player=Player()
 
-    Sky(color=rgb(255,255,255))
+    Sky(color=rgb(200,255,255))
 
     dirt=[]
     stone=[]
