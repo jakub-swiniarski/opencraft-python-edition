@@ -8,7 +8,7 @@ def main():
 
     window.title="OpenCraft Python Edition"
     window.borderless = False
-    window.fullscreen = False
+    window.fullscreen = True
     window.exit_button.visible = False
     #window.fps_counter.enabled = False
 
@@ -23,6 +23,7 @@ def main():
             dirt.append(newDirt)
 
     #for mouse sensitivity testing
+    #test on the main monitor, jump before testing, wait for fps to stabilize
     newStone=Stone(10,1,0)
     stone.append(newStone)
     newStone=Stone(10,2,0)
