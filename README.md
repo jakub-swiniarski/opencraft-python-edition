@@ -1,2 +1,2 @@
-# Minecraft Python Edition
+# OpenCraft
 work in progress
