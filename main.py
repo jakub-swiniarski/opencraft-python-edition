@@ -16,9 +16,13 @@ def main():
 
     camera.fov=90
 
-    player=Player()
+    player=Player(0,1,0)
 
-    dirt=Dirt()
+    dirt=[]
+    for i in range(21):
+        for j in range(21):
+            newDirt=Dirt(i-10,0,j-10)
+            dirt.append(newDirt)
 
     app.run()
 
