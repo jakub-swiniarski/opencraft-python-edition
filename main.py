@@ -5,7 +5,7 @@ from entities.Player import Player
 def main():
     app = Ursina()
 
-    window.title="Minecraft Python Edition"
+    window.title="OpenCraft"
     window.borderless = False
     window.fullscreen = False
     window.exit_button.visible = False
