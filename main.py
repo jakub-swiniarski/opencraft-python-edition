@@ -1,6 +1,7 @@
 from ursina import *
 from blocks.Dirt import Dirt
 from entities.Player import Player
+from blocks.Stone import Stone
 
 def main():
     app = Ursina()
@@ -14,17 +15,18 @@ def main():
     player=Player()
 
     dirt=[]
+    stone=[]
+
     for i in range(21):
         for j in range(21):
             newDirt=Dirt(i-10,0,j-10)
             dirt.append(newDirt)
 
     #for mouse sensitivity testing
-    #newDirt=Dirt(6,1,0)
-    #dirt.append(newDirt)
-    #newDirt=Dirt(6,2,0)
-    #dirt.append(newDirt)
-    #USE STONE
+    newStone=Stone(10,1,0)
+    stone.append(newStone)
+    newStone=Stone(10,2,0)
+    stone.append(newStone)
 
     app.run()
 

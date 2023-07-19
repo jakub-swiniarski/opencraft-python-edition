@@ -13,7 +13,7 @@ class Player(Entity):
         camera.rotation = (0,0,0)
         camera.fov = 90
         mouse.locked = True
-        self.mouse_sensitivity = 75
+        self.mouse_sensitivity = 90
 
         self.gravity = 1
         self.grounded = False
