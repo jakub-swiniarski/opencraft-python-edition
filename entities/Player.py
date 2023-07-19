@@ -1,13 +1,13 @@
 from ursina import *
 
 class Player(Entity):
-    def __init__(self):
+    def __init__(self,x,y,z):
         super().__init__()
         self.model='cube'
         self.collider='box'
         #invisible, for now at least 
         self.color=Color(255,255,255,0)
-        self.position=(0,1,-10)
+        self.position=(x,y,z)
         self.rotation=(0,0,0)
         self.scale=(1,2,1)
 
