@@ -6,7 +6,7 @@ from blocks.Stone import Stone
 def main():
     app = Ursina()
 
-    window.title="OpenCraft"
+    window.title="OpenCraft Python Edition"
     window.borderless = False
     window.fullscreen = False
     window.exit_button.visible = False
