@@ -21,8 +21,10 @@ stone=[]
 
 def input(key):
         #mouse
-        if key == 'left mouse down' and mouse.hovered_entity:
-            destroy(mouse.hovered_entity)
+        if key == 'left mouse down':
+            hit_info = raycast(camera.world_position, camera.forward, distance=5)
+            if hit_info.hit:
+                destroy(mouse.hovered_entity)
 
         if key == 'right mouse down':
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
