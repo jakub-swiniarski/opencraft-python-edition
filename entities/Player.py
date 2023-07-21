@@ -92,13 +92,6 @@ class Player(Entity):
         if key == 'escape':
             quit()
 
-        #mouse
-        if key == 'left mouse down' and mouse.hovered_entity:
-            destroy(mouse.hovered_entity)
-
-        if key == 'right mouse down':
-            print("right mouse down")
-
     def jump(self):
         if not self.grounded:
             return
