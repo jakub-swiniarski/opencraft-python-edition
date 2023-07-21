@@ -1,2 +1,6 @@
 # OpenCraft Python Edition
-work in progress
+## Controls
+W,S,A,D - move around
+Numbers - choose a block
+RMB - place a block
+LMB - destroy a block
