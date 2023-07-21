@@ -38,11 +38,4 @@ for i in range(21):
         newDirt=Dirt(i-10,0,j-10)
         dirt.append(newDirt)
 
-#for mouse sensitivity testing
-#test on the main monitor, jump before testing, wait for fps to stabilize
-newStone=Stone(10,1,0)
-stone.append(newStone)
-newStone=Stone(10,2,0)
-stone.append(newStone)
-
 app.run()
