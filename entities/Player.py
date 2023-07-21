@@ -99,7 +99,6 @@ class Player(Entity):
         if key == 'right mouse down':
             print("right mouse down")
 
-
     def jump(self):
         if not self.grounded:
             return
