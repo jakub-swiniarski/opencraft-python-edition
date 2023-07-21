@@ -3,6 +3,11 @@ from blocks.Dirt import Dirt
 from entities.Player import Player
 from blocks.Stone import Stone
 
+def input(key):
+        #mouse
+        if key == 'left mouse down' and mouse.hovered_entity:
+            destroy(mouse.hovered_entity)
+
 def main():
     app = Ursina()
 
