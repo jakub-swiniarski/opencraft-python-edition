@@ -2,7 +2,7 @@ from ursina import *
 from blocks.Dirt import Dirt
 from entities.Player import Player
 from blocks.Stone import Stone
-
+from blocks.Wood import Wood
 
 app = Ursina()
 
@@ -18,9 +18,10 @@ Sky(color=rgb(200,255,255))
 
 dirt=[]
 stone=[]
+wood=[]
 
 def input(key):
-        #mouse
+        #MOUSE INPUT
         if key == 'left mouse down':
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
@@ -30,8 +31,17 @@ def input(key):
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
                 position=hit_info.entity.position + hit_info.normal
-                newDirt=Dirt(position.x, position.y, position.z)
-                dirt.append(newDirt)
+                if player.currentBlock=='1':
+                    newDirt=Dirt(position.x, position.y, position.z)
+                    dirt.append(newDirt)
+
+                if player.currentBlock=='2':
+                    newStone=Stone(position.x, position.y, position.z)
+                    stone.append(newStone)
+
+                if player.currentBlock=='3':
+                    newWood=Wood(position.x, position.y, position.z)
+                    wood.append(newWood)
 
 for i in range(21):
     for j in range(21):
