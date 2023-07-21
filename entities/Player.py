@@ -85,10 +85,20 @@ class Player(Entity):
             self.air_time += time.dt * .25 * self.gravity
 
     def input(self, key):
+        #keyboard
         if key == 'space':
             self.jump()
+
         if key == 'escape':
             quit()
+
+        #mouse
+        if key == 'left mouse down':
+            print("left mouse down")
+
+        if key == 'right mouse down':
+            print("right mouse down")
+
 
     def jump(self):
         if not self.grounded:
