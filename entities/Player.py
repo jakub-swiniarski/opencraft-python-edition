@@ -8,6 +8,8 @@ class Player(Entity):
         self.height = 2
         self.camera_pivot = Entity(parent=self, y=self.height)
 
+        self.currentBlock=1
+
         camera.parent = self.camera_pivot
         camera.position = (0,0,0)
         camera.rotation = (0,0,0)
@@ -85,12 +87,16 @@ class Player(Entity):
             self.air_time += time.dt * .25 * self.gravity
 
     def input(self, key):
-        #keyboard
+        #KEYBOARD INPUT
         if key == 'space':
             self.jump()
 
         if key == 'escape':
             quit()
+
+        #choose a block
+        if key in ['1','2','3','4','5','6','7','8','9','0']:
+            self.currentBlock = key
 
     def jump(self):
         if not self.grounded:
