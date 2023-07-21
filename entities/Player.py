@@ -93,8 +93,8 @@ class Player(Entity):
             quit()
 
         #mouse
-        if key == 'left mouse down':
-            print("left mouse down")
+        if key == 'left mouse down' and mouse.hovered_entity:
+            destroy(mouse.hovered_entity)
 
         if key == 'right mouse down':
             print("right mouse down")
