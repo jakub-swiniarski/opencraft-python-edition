@@ -1,5 +1,4 @@
 from ursina import *
-
 from ursina.shaders import lit_with_shadows_shader 
 
 class Block(Entity):
@@ -11,6 +10,4 @@ class Block(Entity):
         self.position=(x,y,z)
         self.rotation=(0,0,0)
         self.scale=(1,1,1)
-
-        #experiemntal
         self.shader=lit_with_shadows_shader
