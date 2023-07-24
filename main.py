@@ -3,6 +3,7 @@ from blocks.Dirt import Dirt
 from entities.Player import Player
 from blocks.Stone import Stone
 from blocks.Wood import Wood
+from blocks.Bricks import Bricks
 
 app = Ursina()
 
@@ -43,6 +44,10 @@ def input(key):
                 if player.currentBlock=='3':
                     newWood=Wood(position.x, position.y, position.z)
                     wood.append(newWood)
+
+                if player.currentBlock=='4':
+                    newBrick=Bricks(position.x, position.y, position.z)
+                    bricks.append(newBrick)
 
 for i in range(21):
     for j in range(21):
