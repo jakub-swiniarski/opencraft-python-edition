@@ -8,6 +8,7 @@ from blocks.Dirt import Dirt
 from blocks.Stone import Stone
 from blocks.Wood import Wood
 from blocks.Bricks import Bricks
+from blocks.Gold import Gold
 
 app = Ursina()
 
@@ -21,10 +22,7 @@ player=Player()
 
 Sky(color=rgb(200,255,255))
 
-dirt=[]
-stone=[]
-wood=[]
-bricks=[]
+blocks=[]   
 
 def input(key):
         #MOUSE INPUT
@@ -38,25 +36,26 @@ def input(key):
             if hit_info.hit:
                 position=hit_info.entity.position + hit_info.normal
                 if player.currentBlock=='1':
-                    newDirt=Dirt(position.x, position.y, position.z)
-                    dirt.append(newDirt)
+                    newBlock=Dirt(position.x, position.y, position.z)
 
-                if player.currentBlock=='2':
-                    newStone=Stone(position.x, position.y, position.z)
-                    stone.append(newStone)
+                elif player.currentBlock=='2':
+                    newBlock=Stone(position.x, position.y, position.z)
 
-                if player.currentBlock=='3':
-                    newWood=Wood(position.x, position.y, position.z)
-                    wood.append(newWood)
+                elif player.currentBlock=='3':
+                    newBlock=Wood(position.x, position.y, position.z)
 
-                if player.currentBlock=='4':
-                    newBrick=Bricks(position.x, position.y, position.z)
-                    bricks.append(newBrick)
+                elif player.currentBlock=='4':
+                    newBlock=Bricks(position.x, position.y, position.z)
+
+                elif player.currentBlock=='5':
+                    newBlock=Gold(position.x, position.y, position.z)
+
+                blocks.append(newBlock)
 
 for i in range(21):
     for j in range(21):
-        newDirt=Dirt(i-10,0,j-10)
-        dirt.append(newDirt)
+        newBlock=Dirt(i-10,0,j-10)
+        blocks.append(newBlock)
 
 DirectionalLight(parent=Entity(), y=2, z=3, shadows=True, rotation=(45, -45, 45))
 
