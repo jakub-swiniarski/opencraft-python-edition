@@ -1,5 +1,5 @@
 from blocks.Block import Block
-from ursina.shaders import *
+from ursina.shaders import matcap_shader
 
 class Gold(Block):
     def __init__(self,x,y,z):
