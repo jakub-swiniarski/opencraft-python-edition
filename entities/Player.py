@@ -94,6 +94,9 @@ class Player(Entity):
         if key == 'escape':
             quit()
 
+        if key == 'f1':
+            window.fps_counter.enabled=not window.fps_counter.enabled
+
         #choose a block
         if key in ('1', '2', '3', '4', '5', '6'):
             self.currentBlock = key
