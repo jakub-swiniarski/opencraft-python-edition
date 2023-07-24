@@ -95,7 +95,7 @@ class Player(Entity):
             quit()
 
         #choose a block
-        if key in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
+        if key in ('1', '2', '3', '4', '5', '6'):
             self.currentBlock = key
 
     def jump(self):
