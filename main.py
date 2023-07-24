@@ -1,6 +1,10 @@
 from ursina import *
-from blocks.Dirt import Dirt
+
+#entities
 from entities.Player import Player
+
+#blocks
+from blocks.Dirt import Dirt
 from blocks.Stone import Stone
 from blocks.Wood import Wood
 from blocks.Bricks import Bricks
