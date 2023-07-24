@@ -55,6 +55,7 @@ def input(key):
                     newBlock=Glass(position.x, position.y, position.z)
 
                 blocks.append(newBlock)
+                #before adding new blocks, add new numbers in player input (choosing a block)
 
 for i in range(21):
     for j in range(21):
