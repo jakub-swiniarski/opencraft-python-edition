@@ -9,6 +9,7 @@ from blocks.Stone import Stone
 from blocks.Wood import Wood
 from blocks.Bricks import Bricks
 from blocks.Gold import Gold
+from blocks.Glass import Glass
 
 app = Ursina()
 
@@ -49,6 +50,9 @@ def input(key):
 
                 elif player.currentBlock=='5':
                     newBlock=Gold(position.x, position.y, position.z)
+
+                elif player.currentBlock=='6':
+                    newBlock=Glass(position.x, position.y, position.z)
 
                 blocks.append(newBlock)
 
