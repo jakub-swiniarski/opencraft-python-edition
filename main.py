@@ -19,6 +19,7 @@ Sky(color=rgb(200,255,255))
 dirt=[]
 stone=[]
 wood=[]
+bricks=[]
 
 def input(key):
         #MOUSE INPUT
