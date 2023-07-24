@@ -48,7 +48,6 @@ for i in range(21):
         newDirt=Dirt(i-10,0,j-10)
         dirt.append(newDirt)
 
-pivot = Entity()
-DirectionalLight(parent=pivot, y=2, z=3, shadows=True, rotation=(45, -45, 45))
+DirectionalLight(parent=Entity(), y=2, z=3, shadows=True, rotation=(45, -45, 45))
 
 app.run()
