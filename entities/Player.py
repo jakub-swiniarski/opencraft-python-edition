@@ -10,7 +10,7 @@ class Player(Entity):
         self.currentBlock='1'
 
         #cmd
-        self.cmd = Text(text='', size=16)
+        self.cmd = Text(text='/', scale=0)
         self.cmdIsOn = False
 
         #camera
@@ -108,6 +108,10 @@ class Player(Entity):
 
         if key == '/':
             self.cmdIsOn=not self.cmdIsOn
+            if self.cmdIsOn:
+                self.cmd.scale=0
+            else:
+                self.cmd.scale=1
 
     def jump(self):
         if not self.grounded:
