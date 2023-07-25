@@ -1,7 +1,7 @@
 from ursina import *
 
 class Player(Entity):
-    def __init__(self, **kwargs):
+    def __init__(self):
         self.cursor = Entity(parent=camera.ui, model='circle', color=color.pink, scale=.005)
         super().__init__()
         self.speed = 5
@@ -28,9 +28,6 @@ class Player(Entity):
 
         self.traverse_target = scene     # by default, it will collide with everything. change this to change the raycasts' traverse targets.
         self.ignore_list = [self, ]
-
-        for key, value in kwargs.items():
-            setattr(self, key ,value)
 
         # make sure we don't fall through the ground if we start inside it
         if self.gravity:
