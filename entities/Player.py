@@ -117,9 +117,18 @@ class Player(Entity):
         #cmd typing
         if self.cmdIsOn:
             if key == 'backspace':
-                print("BACC")
+                if self.cmd.text[-1]!='/':
+                    self.cmd.text=self.cmd.text[:-1]
+                    self.cmd.create_background(color=rgb(0,0,0))
+                else:
+                    self.cmdIsOn=False
+                    self.cmd.scale=0
+            elif key == 'space':
+                self.cmd.text+=' '
+                self.cmd.create_background(color=rgb(0,0,0))
             elif key.isalnum():
-                print("alphabet")
+                self.cmd.text+=key
+                self.cmd.create_background(color=rgb(0,0,0))
 
     def jump(self):
         if not self.grounded:
