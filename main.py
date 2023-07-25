@@ -64,3 +64,9 @@ for i in range(21):
 DirectionalLight(parent=Entity(), y=2, z=3, shadows=True, rotation=(45, -45, 45))
 
 app.run()
+
+#----------TODO----------
+#render distance, change by pressing a key
+#do not render blocks that are not visible
+#level of detail
+#------------------------
