@@ -116,7 +116,16 @@ class Player(Entity):
                 self.cmd.scale=0
         #cmd typing
         if self.cmdIsOn:
-            if key == 'backspace':
+            if key == 'enter':
+                #-----COMMANDS-----
+                if self.cmd.text.startswith('/msens '):
+                    print("mouse sens")
+                #------------------
+                self.cmd.text='/'
+                self.cmdIsOn=False
+                self.cmd.scale=0
+                self.cmd.background=None
+            elif key == 'backspace':
                 if self.cmd.text[-1]!='/':
                     self.cmd.text=self.cmd.text[:-1]
                     self.cmd.create_background(color=rgb(0,0,0))
