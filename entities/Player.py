@@ -106,6 +106,7 @@ class Player(Entity):
         if key in ('1', '2', '3', '4', '5', '6'):
             self.currentBlock = key
 
+        #cmd
         if key == '/':
             self.cmdIsOn=not self.cmdIsOn
             if self.cmdIsOn:
@@ -113,6 +114,12 @@ class Player(Entity):
                 self.cmd.create_background(color=rgb(0,0,0))
             else:
                 self.cmd.scale=0
+        #cmd typing
+        if self.cmdIsOn:
+            if key == 'backspace':
+                print("BACC")
+            elif key.isalnum():
+                print("alphabet")
 
     def jump(self):
         if not self.grounded:
