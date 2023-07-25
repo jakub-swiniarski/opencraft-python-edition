@@ -18,6 +18,7 @@ window.borderless = False
 window.fullscreen = True
 window.exit_button.visible = False
 window.fps_counter.enabled = False
+window.cog_button.visible=False
 
 player=Player()
 
