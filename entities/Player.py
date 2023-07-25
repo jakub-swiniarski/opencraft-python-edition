@@ -6,18 +6,26 @@ class Player(Entity):
         super().__init__()
         self.speed = 5
         self.height = 2
-        self.camera_pivot = Entity(parent=self, y=self.height)
 
         self.currentBlock='1'
 
+        #cmd
+        #self.cmd = Text(text='', size=16)
+        #self.cmdIsOn = False
+
+        #camera
+        self.camera_pivot = Entity(parent=self, y=self.height)
         camera.parent = self.camera_pivot
         camera.position = (0,0,0)
         camera.rotation = (0,0,0)
         camera.fov = 90
+
+        #mouse
         mouse.locked = True
         mouse.visible=False
         self.mouse_sensitivity = 110
 
+        #physics
         self.gravity = 1
         self.grounded = False
         self.jump_height = 2
@@ -95,9 +103,11 @@ class Player(Entity):
         if key == 'f1':
             window.fps_counter.enabled=not window.fps_counter.enabled
 
-        #choose a block
         if key in ('1', '2', '3', '4', '5', '6'):
             self.currentBlock = key
+
+        if key == '/':
+            print("CMD OPENED")
 
     def jump(self):
         if not self.grounded:
