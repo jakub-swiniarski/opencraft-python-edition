@@ -118,8 +118,9 @@ class Player(Entity):
         if self.cmdIsOn:
             if key == 'enter':
                 #-----COMMANDS-----
-                if self.cmd.text.startswith('/msens '):
-                    print("mouse sens")
+                if self.cmd.text.startswith('/msens'):
+                    if(self.cmd.text[6:].isdigit()):
+                        self.mouse_sensitivity=float(self.cmd.text[6:])
                 #------------------
                 self.cmd.text='/'
                 self.cmdIsOn=False
