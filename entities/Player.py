@@ -10,8 +10,8 @@ class Player(Entity):
         self.currentBlock='1'
 
         #cmd
-        #self.cmd = Text(text='', size=16)
-        #self.cmdIsOn = False
+        self.cmd = Text(text='', size=16)
+        self.cmdIsOn = False
 
         #camera
         self.camera_pivot = Entity(parent=self, y=self.height)
@@ -107,7 +107,7 @@ class Player(Entity):
             self.currentBlock = key
 
         if key == '/':
-            print("CMD OPENED")
+            self.cmdIsOn=not self.cmdIsOn
 
     def jump(self):
         if not self.grounded:
