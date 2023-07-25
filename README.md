@@ -9,7 +9,8 @@ Escape - quit <br/>
 / - open the command line
 
 ## Commands
-Coming soon...
+/msens - change mouse sensitivity<br/>
+Example: /msens100
 
 ## Screenshots
 ### A simple house
