@@ -9,7 +9,7 @@ Escape - quit <br/>
 
 ## Commands
 /msens - change mouse sensitivity<br/>
-Example: /msens100<br/><br/>
+Example: /msens100<br/>
 
 /fps - show/hide the FPS counter
 
