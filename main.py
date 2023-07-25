@@ -56,7 +56,7 @@ def input(key):
                     Glass(position.x, position.y, position.z)
 
                 #before adding new blocks, add new numbers in player input (choosing a block)
-                #add a menu for choosing blocksa
+                #add a menu for choosing blocks
 
 for i in range(21):
     for j in range(21):
