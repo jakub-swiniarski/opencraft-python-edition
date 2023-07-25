@@ -15,6 +15,7 @@ class Player(Entity):
         camera.rotation = (0,0,0)
         camera.fov = 90
         mouse.locked = True
+        mouse.visible=False
         self.mouse_sensitivity = 110
 
         self.gravity = 1
@@ -116,11 +117,3 @@ class Player(Entity):
     def land(self):
         self.air_time = 0
         self.grounded = True
-
-    def on_enable(self):
-        mouse.locked = True
-        self.cursor.enabled = True
-
-    def on_disable(self):
-        mouse.locked = False
-        self.cursor.enabled = False
