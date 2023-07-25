@@ -66,7 +66,8 @@ DirectionalLight(parent=Entity(), y=2, z=3, shadows=True, rotation=(45, -45, 45)
 app.run()
 
 #----------TODO----------
-#render distance, change by pressing a key
+#render distance, change with cmd
+#quality0 - switch to gold_old and disable matcap shader
 #do not render blocks that are not visible
 #level of detail
 #------------------------
