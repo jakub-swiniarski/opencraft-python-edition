@@ -26,6 +26,7 @@ class Player(Entity):
         self.mouse_sensitivity = 110
 
         #physics
+        self.canMove=True
         self.gravity = 1
         self.grounded = False
         self.jump_height = 2
@@ -67,7 +68,8 @@ class Player(Entity):
                 move_amount[2] = min(move_amount[2], 0)
             if raycast(self.position+Vec3(-.0,1,0), Vec3(0,0,-1), distance=.5, traverse_target=self.traverse_target, ignore=self.ignore_list).hit:
                 move_amount[2] = max(move_amount[2], 0)
-            self.position += move_amount
+            if self.canMove:
+                self.position += move_amount
 
             # self.position += self.direction * self.speed * time.dt
 
@@ -107,9 +109,11 @@ class Player(Entity):
         if key == '/':
             self.cmdIsOn=not self.cmdIsOn
             if self.cmdIsOn:
+                self.canMove=False
                 self.cmd.scale=1
                 self.cmd.create_background(color=rgb(0,0,0))
             else:
+                self.canMove=True
                 self.cmd.scale=0
         #cmd typing
         if self.cmdIsOn:
@@ -121,6 +125,7 @@ class Player(Entity):
                 if self.cmd.text=='/fps':
                     window.fps_counter.enabled=not window.fps_counter.enabled
                 #------------------
+                self.canMove=True
                 self.cmd.text='/'
                 self.cmdIsOn=False
                 self.cmd.scale=0
@@ -130,6 +135,7 @@ class Player(Entity):
                     self.cmd.text=self.cmd.text[:-1]
                     self.cmd.create_background(color=rgb(0,0,0))
                 else:
+                    self.canMove=True
                     self.cmdIsOn=False
                     self.cmd.scale=0
             elif key == 'space':
