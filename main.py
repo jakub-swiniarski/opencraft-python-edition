@@ -24,8 +24,6 @@ player=Player()
 
 Sky(color=rgb(200,255,255))
 
-blocks=[]   
-
 def input(key):
         #MOUSE INPUT
         if key == 'left mouse down':
@@ -38,30 +36,28 @@ def input(key):
             if hit_info.hit:
                 position=hit_info.entity.position + hit_info.normal
                 if player.currentBlock=='1':
-                    newBlock=Dirt(position.x, position.y, position.z)
+                    Dirt(position.x, position.y, position.z)
 
                 elif player.currentBlock=='2':
-                    newBlock=Stone(position.x, position.y, position.z)
+                    Stone(position.x, position.y, position.z)
 
                 elif player.currentBlock=='3':
-                    newBlock=Wood(position.x, position.y, position.z)
+                    Wood(position.x, position.y, position.z)
 
                 elif player.currentBlock=='4':
-                    newBlock=Bricks(position.x, position.y, position.z)
+                    Bricks(position.x, position.y, position.z)
 
                 elif player.currentBlock=='5':
-                    newBlock=Gold(position.x, position.y, position.z)
+                    Gold(position.x, position.y, position.z)
 
                 elif player.currentBlock=='6':
-                    newBlock=Glass(position.x, position.y, position.z)
+                    Glass(position.x, position.y, position.z)
 
-                blocks.append(newBlock)
                 #before adding new blocks, add new numbers in player input (choosing a block)
 
 for i in range(21):
     for j in range(21):
-        newBlock=Dirt(i-10,0,j-10)
-        blocks.append(newBlock)
+        Dirt(i-10,0,j-10)
 
 DirectionalLight(parent=Entity(), y=2, z=3, shadows=True, rotation=(45, -45, 45))
 
