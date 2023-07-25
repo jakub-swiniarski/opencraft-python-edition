@@ -5,7 +5,11 @@ Numbers - choose a block <br/>
 RMB - place a block <br/>
 LMB - destroy a block <br/>
 F1 - show/hide the fps counter <br/>
-Escape - quit
+Escape - quit <br/>
+/ - open the command line
+
+## Commands
+Coming soon...
 
 ## Screenshots
 ### A simple house
