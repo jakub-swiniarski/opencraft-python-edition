@@ -11,6 +11,8 @@ from blocks.Bricks import Bricks
 from blocks.Gold import Gold
 from blocks.Glass import Glass
 
+#-------------------------------------
+
 app = Ursina()
 
 window.title="OpenCraft Python Edition"
