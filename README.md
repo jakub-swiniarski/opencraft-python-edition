@@ -4,13 +4,14 @@ W,S,A,D - move around <br/>
 Numbers - choose a block <br/>
 RMB - place a block <br/>
 LMB - destroy a block <br/>
-F1 - show/hide the fps counter <br/>
 Escape - quit <br/>
 / - open the command line
 
 ## Commands
 /msens - change mouse sensitivity<br/>
-Example: /msens100
+Example: /msens100<br/><br/>
+
+/fps - show/hide the FPS counter
 
 ## Screenshots
 ### A simple house
