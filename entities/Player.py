@@ -139,7 +139,7 @@ class Player(Entity):
                 #change volume
                 if self.cmd.text.startswith('/vol'):
                     if(self.cmd.text[4:].isdigit()):
-                        self.volume=float(self.cmd.text[4:])
+                        self.volume=int(self.cmd.text[4:])
                 #------------------
                 self.canMove=True
                 self.cmd.text='/'
