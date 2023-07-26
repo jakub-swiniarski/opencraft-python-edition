@@ -14,6 +14,9 @@ class Player(Entity):
         self.cmdIsOn = False
         self.bgColor = rgb(0,0,0)
 
+        #sound
+        self.volume = 1
+
         #camera
         self.camera_pivot = Entity(parent=self, y=self.height)
         camera.parent = self.camera_pivot
