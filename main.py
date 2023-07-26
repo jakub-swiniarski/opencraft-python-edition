@@ -36,7 +36,7 @@ def input(key):
             if hit_info.hit:
                 #play break sound
                 if str(mouse.hovered_entity).lower()=='glass':
-                    Audio('assets/sounds/blocks/break-glass.mp3',volume=player.volume, pitch=random.randint(8,12)/10)
+                    Audio('assets/sounds/blocks/break-glass.mp3',volume=player.volume, pitch=random.randint(8,12)/10) #turn these into functions???
                 else:
                     #temporary break sound
                     Audio('assets/sounds/blocks/place.mp3',volume=player.volume, pitch=random.randint(8,12)/10)
