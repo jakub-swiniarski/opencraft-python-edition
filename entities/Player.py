@@ -6,13 +6,12 @@ class Player(Entity):
         super().__init__()
         self.speed = 5
         self.height = 2
-
+        self.volume = 1
         self.currentBlock='1'
 
         #cmd
         self.cmd = Text(text='/', scale=0, x=-0.86, y=-0.447)
         self.cmdIsOn = False
-        self.bgColor = rgb(0,0,0)
 
         #camera
         self.camera_pivot = Entity(parent=self, y=self.height)
@@ -112,7 +111,7 @@ class Player(Entity):
             if self.cmdIsOn:
                 self.canMove=False
                 self.cmd.scale=1
-                self.cmd.create_background(color=self.bgColor)
+                self.cmd.create_background(color=rgb(0,0,0))
             else:
                 self.canMove=True
                 self.cmd.scale=0
@@ -123,11 +122,11 @@ class Player(Entity):
                 if self.cmd.text.startswith('/msens'):
                     if(self.cmd.text[6:].isdigit()):
                         self.mouse_sensitivity=float(self.cmd.text[6:])
-                elif self.cmd.text=='/fps':
-                    window.fps_counter.enabled=not window.fps_counter.enabled
-                elif self.cmd.text.startswith('/fov'):
+                if self.cmd.text.startswith('/vol'):
                     if(self.cmd.text[4:].isdigit()):
-                        camera.fov=float(self.cmd.text[4:])
+                        self.volume = float(self.cmd.text[4:]) / 100
+                if self.cmd.text=='/fps':
+                    window.fps_counter.enabled=not window.fps_counter.enabled
                 #------------------
                 self.canMove=True
                 self.cmd.text='/'
@@ -137,20 +136,17 @@ class Player(Entity):
             elif key == 'backspace':
                 if self.cmd.text[-1]!='/':
                     self.cmd.text=self.cmd.text[:-1]
-                    self.cmd.create_background(color=self.bgColor)
+                    self.cmd.create_background(color=rgb(0,0,0))
                 else:
                     self.canMove=True
                     self.cmdIsOn=False
                     self.cmd.scale=0
             elif key == 'space':
                 self.cmd.text+=' '
-                self.cmd.create_background(color=self.bgColor)
+                self.cmd.create_background(color=rgb(0,0,0))
             elif key.isalnum():
                 self.cmd.text+=key
-                self.cmd.create_background(color=self.bgColor)
-            elif key == '.':
-                self.cmd.text+='.'
-                self.cmd.create_background(color=self.bgColor)
+                self.cmd.create_background(color=rgb(0,0,0))
 
     def jump(self):
         if not self.grounded:

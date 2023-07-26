@@ -31,6 +31,7 @@ def input(key):
         if key == 'left mouse down':
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
+                Audio('assets/sfx/hitHurt.wav', range = 1, parent = "Player").volume = player.volume
                 destroy(mouse.hovered_entity)
 
         if key == 'right mouse down':
@@ -38,21 +39,27 @@ def input(key):
             if hit_info.hit:
                 position=hit_info.entity.position + hit_info.normal
                 if player.currentBlock=='1':
+                    Audio('assets/sfx/laserShoot.wav', range = 1, parent = "Player").volume = player.volume
                     Dirt(position.x, position.y, position.z)
 
                 elif player.currentBlock=='2':
+                    Audio('assets/sfx/laserShoot.wav', range = 1, parent = "Player").volume = player.volume
                     Stone(position.x, position.y, position.z)
 
                 elif player.currentBlock=='3':
+                    Audio('assets/sfx/laserShoot.wav', range = 1, parent = "Player").volume = player.volume
                     Wood(position.x, position.y, position.z)
 
                 elif player.currentBlock=='4':
+                    Audio('assets/sfx/laserShoot.wav', range = 1, parent = "Player").volume = player.volume
                     Bricks(position.x, position.y, position.z)
 
                 elif player.currentBlock=='5':
+                    Audio('assets/sfx/laserShoot.wav', range = 1, parent = "Player").volume = player.volume
                     Gold(position.x, position.y, position.z)
 
                 elif player.currentBlock=='6':
+                    Audio('assets/sfx/laserShoot.wav', range = 1, parent = "Player").volume = player.volume
                     Glass(position.x, position.y, position.z)
 
                 #before adding new blocks, add new numbers in player input (choosing a block)
@@ -71,4 +78,5 @@ app.run()
 #quality0 - switch to gold_old and disable matcap shader
 #do not render blocks that are not visible
 #level of detail
+#stop player from moving when cmd is open
 #------------------------

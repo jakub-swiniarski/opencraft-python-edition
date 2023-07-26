@@ -11,10 +11,11 @@ Escape - quit <br/>
 /msens - change mouse sensitivity<br/>
 Example: /msens100<br/>
 
-/fps - show/hide the FPS counter<br/>
+/vol - change volume<br/>
+Example: /vol 0 - sound off<br/>
+Example: /vol 100 - max<br/>
 
-/fov - change camera FOV<br/>
-Example: /fov100<br/>
+/fps - show/hide the FPS counter
 
 ## Screenshots
 ### A simple house
