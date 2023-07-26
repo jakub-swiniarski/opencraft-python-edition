@@ -1,4 +1,5 @@
 from ursina import *
+import random
 
 #entities
 from entities.Player import Player
@@ -72,6 +73,7 @@ def input(key):
                 #whether the player clicked an object that 
                 #inherits the Block class
                 #in order to play the right sound
+                placeSound.pitch=random.randint(8,12)/10
                 placeSound.play()
                 
 #UPDATE
