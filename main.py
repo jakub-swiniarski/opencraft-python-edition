@@ -15,6 +15,7 @@ from blocks.Glass import Glass
 
 app = Ursina()
 
+#WINDOW SETTINGS
 window.title="OpenCraft Python Edition"
 window.borderless = False
 window.fullscreen = True
