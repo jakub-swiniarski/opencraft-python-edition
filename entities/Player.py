@@ -123,14 +123,23 @@ class Player(Entity):
         if self.cmdIsOn:
             if key == 'enter':
                 #-----COMMANDS-----
+                #this probably can be simplified, but im too lazy
+                
+                #mouse sensitivity
                 if self.cmd.text.startswith('/msens'):
                     if(self.cmd.text[6:].isdigit()):
                         self.mouse_sensitivity=float(self.cmd.text[6:])
+                #show/hide fps
                 elif self.cmd.text=='/fps':
                     window.fps_counter.enabled=not window.fps_counter.enabled
+                #change fov
                 elif self.cmd.text.startswith('/fov'):
                     if(self.cmd.text[4:].isdigit()):
                         camera.fov=float(self.cmd.text[4:])
+                #change volume
+                if self.cmd.text.startswith('/vol'):
+                    if(self.cmd.text[4:].isdigit()):
+                        self.volume=float(self.cmd.text[4:])
                 #------------------
                 self.canMove=True
                 self.cmd.text='/'
