@@ -11,7 +11,10 @@ Escape - quit <br/>
 /msens - change mouse sensitivity<br/>
 Example: /msens100<br/>
 
-/fps - show/hide the FPS counter
+/fps - show/hide the FPS counter<br/>
+
+/fov - change camera FOV<br/>
+Example: /fov100<br/>
 
 ## Screenshots
 ### A simple house
