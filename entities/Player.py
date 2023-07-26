@@ -122,8 +122,11 @@ class Player(Entity):
                 if self.cmd.text.startswith('/msens'):
                     if(self.cmd.text[6:].isdigit()):
                         self.mouse_sensitivity=float(self.cmd.text[6:])
-                if self.cmd.text=='/fps':
+                elif self.cmd.text=='/fps':
                     window.fps_counter.enabled=not window.fps_counter.enabled
+                elif self.cmd.text.startswith('/fov'):
+                    if(self.cmd.text[4:].isdigit()):
+                        camera.fov=float(self.cmd.text[4:])
                 #------------------
                 self.canMove=True
                 self.cmd.text='/'
