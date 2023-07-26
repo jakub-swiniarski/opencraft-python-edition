@@ -28,7 +28,7 @@ player=Player()
 
 Sky(color=rgb(200,255,255))
 
-#sounds
+#SOUNDS
 placeSound=Audio('assets/sounds/blocks/place.mp3',volume=player.volume)
 #RANDOMIZE PITCH!!!
 
@@ -80,7 +80,7 @@ def input(key):
 def update():
     placeSound.volume=player.volume
 
-#generate world
+#GENERATE WORLD
 for i in range(21):
     for j in range(21):
         Dirt(i-10,0,j-10)
