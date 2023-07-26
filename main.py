@@ -50,6 +50,13 @@ def input(key):
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
                 position=hit_info.entity.position + hit_info.normal
+                #!!!BUG!!!
+                #IF THE PLAYER IS INSIDE OF A BLOCK
+                #HE CAN PLACE MULTIPLE BLOCKS
+                #IN THE SAME PLACE CAUSING FPS DROPS
+                #------------------------------------
+                #1ST CHECK IF THE BLOCK IS NOT GONNA
+                #COLLIDE WITH THE PLAYER, THEN PLACE IT
                 if player.currentBlock=='1':
                     Dirt(position.x, position.y, position.z)
 
