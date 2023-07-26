@@ -38,11 +38,13 @@ def input(key):
         if key == 'left mouse down':
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
+                #print(mouse.hovered_entity)
+                #play correct sounds before destroying
                 destroy(mouse.hovered_entity)
                 #if u add entities, u will have to check 
                 #whether the player clicked an object that 
                 # inherits the Block class
-                #in order to play the right sound
+                #in order to play the right 
 
         if key == 'right mouse down':
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
