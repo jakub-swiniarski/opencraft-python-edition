@@ -16,6 +16,10 @@ Example: /msens100<br/>
 /fov - change camera FOV<br/>
 Example: /fov100<br/>
 
+/vol - change sound volume
+Example: /vol0
+I'm not sure why, but values don't work for sound volume, so you can only use 0 or 1.
+
 ## Screenshots
 ### A simple house
 <img src=https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/9830a287-fa28-433b-9337-35c8ecb68db7><br/>
