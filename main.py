@@ -69,9 +69,9 @@ def input(key):
                 #before adding new blocks, add new numbers in player input (choosing a block)
                 #add a menu for choosing blocks
 
-                #if u add entities, u will have to check 
-                #whether the player clicked an object that 
-                #inherits the Block class
+                #if u add mobs, u will have to check 
+                #whether the player clicked on an 
+                #object that inherits from the Block class
                 #in order to play the right sound
                 placeSound.pitch=random.randint(8,12)/10
                 placeSound.play()
