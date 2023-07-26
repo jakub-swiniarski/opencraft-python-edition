@@ -81,6 +81,7 @@ for i in range(21):
     for j in range(21):
         Dirt(i-10,0,j-10)
 
+#LIGHT
 DirectionalLight(parent=Entity(), y=2, z=3, shadows=True, rotation=(45, -45, 45))
 
 app.run()
