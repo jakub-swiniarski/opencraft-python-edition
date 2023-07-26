@@ -10,4 +10,6 @@ class Block(Entity):
         self.position=(x,y,z)
         self.rotation=(0,0,0)
         self.scale=(1,1,1)
+
+        #shaders
         self.shader=lit_with_shadows_shader

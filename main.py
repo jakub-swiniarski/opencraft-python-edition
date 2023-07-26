@@ -26,12 +26,20 @@ player=Player()
 
 Sky(color=rgb(200,255,255))
 
+#sounds
+placeSound=Audio('assets/sounds/blocks/place.mp3',volume=player.volume)
+
+#INPUT
 def input(key):
         #MOUSE INPUT
         if key == 'left mouse down':
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
                 destroy(mouse.hovered_entity)
+                #if u add entities, u will have to check 
+                #whether the player clicked an object that 
+                # inherits the Block class
+                #in order to play the right sound
 
         if key == 'right mouse down':
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
@@ -58,6 +66,17 @@ def input(key):
                 #before adding new blocks, add new numbers in player input (choosing a block)
                 #add a menu for choosing blocks
 
+                #if u add entities, u will have to check 
+                #whether the player clicked an object that 
+                # inherits the Block class
+                #in order to play the right sound
+                placeSound.play()
+                
+#UPDATE
+def update():
+    placeSound.volume=player.volume
+
+#generate world
 for i in range(21):
     for j in range(21):
         Dirt(i-10,0,j-10)
