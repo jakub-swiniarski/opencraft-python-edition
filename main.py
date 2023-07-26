@@ -28,7 +28,6 @@ player=Player()
 
 Sky(color=rgb(200,255,255))
 
-#INPUT
 def input(key):
         #MOUSE INPUT
         if key == 'left mouse down':
