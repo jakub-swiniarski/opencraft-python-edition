@@ -12,6 +12,7 @@ class Player(Entity):
         #cmd
         self.cmd = Text(text='/', scale=0, x=-0.86, y=-0.447)
         self.cmdIsOn = False
+        self.bgColor = rgb(0,0,0)
 
         #camera
         self.camera_pivot = Entity(parent=self, y=self.height)
@@ -111,7 +112,7 @@ class Player(Entity):
             if self.cmdIsOn:
                 self.canMove=False
                 self.cmd.scale=1
-                self.cmd.create_background(color=rgb(0,0,0))
+                self.cmd.create_background(color=self.bgColor)
             else:
                 self.canMove=True
                 self.cmd.scale=0
@@ -136,20 +137,20 @@ class Player(Entity):
             elif key == 'backspace':
                 if self.cmd.text[-1]!='/':
                     self.cmd.text=self.cmd.text[:-1]
-                    self.cmd.create_background(color=rgb(0,0,0))
+                    self.cmd.create_background(color=self.bgColor)
                 else:
                     self.canMove=True
                     self.cmdIsOn=False
                     self.cmd.scale=0
             elif key == 'space':
                 self.cmd.text+=' '
-                self.cmd.create_background(color=rgb(0,0,0))
+                self.cmd.create_background(color=self.bgColor)
             elif key.isalnum():
                 self.cmd.text+=key
-                self.cmd.create_background(color=rgb(0,0,0))
+                self.cmd.create_background(color=self.bgColor)
             elif key == '.':
                 self.cmd.text+='.'
-                self.cmd.create_background(color=rgb(0,0,0)) #define the bg color somewhere in this file
+                self.cmd.create_background(color=self.bgColor)
 
     def jump(self):
         if not self.grounded:
