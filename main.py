@@ -29,7 +29,9 @@ player=Player()
 Sky(color=rgb(200,255,255))
 
 #SOUNDS
-placeSound=Audio('assets/sounds/blocks/place.mp3',volume=player.volume)
+#autoplay = False prevents the sounds from playing at the start of the game
+placeSound=Audio('assets/sounds/blocks/place.mp3',volume=player.volume, autoplay=False)
+glassBreakSound=Audio('assets/sounds/blocks/break-glass.mp3',volume=player.volume, autoplay=False)
 #RANDOMIZE PITCH!!!
 
 #INPUT
@@ -38,8 +40,14 @@ def input(key):
         if key == 'left mouse down':
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
-                #print(mouse.hovered_entity)
-                #play correct sounds before destroying
+                #play break sound
+                if str(mouse.hovered_entity).lower()=='glass':
+                    glassBreakSound.pitch=random.randint(8,12)/10
+                    glassBreakSound.play()
+                else:
+                    #temporary break sound
+                    placeSound.play()
+
                 destroy(mouse.hovered_entity)
                 #if u add entities, u will have to check 
                 #whether the player clicked an object that 
@@ -75,12 +83,19 @@ def input(key):
                 #whether the player clicked on an 
                 #object that inherits from the Block class
                 #in order to play the right sound
+
+                #play place sound
                 placeSound.pitch=random.randint(8,12)/10
                 placeSound.play()
                 
 #UPDATE
 def update():
+    #update sound volume
+    #should probably check if volume
+    #has changed and then update but eh
+    #too lazy
     placeSound.volume=player.volume
+    glassBreakSound.volume=player.volume
 
 #GENERATE WORLD
 for i in range(21):
