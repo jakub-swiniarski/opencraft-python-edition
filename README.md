@@ -18,7 +18,7 @@ Example: /fov100<br/>
 
 /vol - change sound volume
 Example: /vol0
-I'm not sure why, but values don't work for sound volume, so you can only use 0 or 1.
+Use values between 0 and 100.
 
 ## Screenshots
 ### A simple house
