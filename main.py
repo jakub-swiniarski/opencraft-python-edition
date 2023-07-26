@@ -28,6 +28,7 @@ Sky(color=rgb(200,255,255))
 
 #sounds
 placeSound=Audio('assets/sounds/blocks/place.mp3',volume=player.volume)
+#RANDOMIZE PITCH!!!
 
 #INPUT
 def input(key):
