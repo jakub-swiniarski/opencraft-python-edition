@@ -68,7 +68,7 @@ def input(key):
 
                 #if u add entities, u will have to check 
                 #whether the player clicked an object that 
-                # inherits the Block class
+                #inherits the Block class
                 #in order to play the right sound
                 placeSound.play()
                 
