@@ -20,6 +20,9 @@ Example: /fov100<br/>
 Example: /vol0<br/>
 Use values between 0 and 100.<br/>
 
+## Tips
+If you get stuck in a block or in the ground, just jump.
+
 ## Screenshots
 ### A simple house
 <img src=https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/9830a287-fa28-433b-9337-35c8ecb68db7><br/>
