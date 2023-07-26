@@ -16,9 +16,9 @@ Example: /msens100<br/>
 /fov - change camera FOV<br/>
 Example: /fov100<br/>
 
-/vol - change sound volume
-Example: /vol0
-I'm not sure why, but values don't work for sound volume, so you can only use 0 or 1.
+/vol - change sound volume<br/>
+Example: /vol0<br/>
+Use values between 0 and 100.<br/>
 
 ## Screenshots
 ### A simple house
