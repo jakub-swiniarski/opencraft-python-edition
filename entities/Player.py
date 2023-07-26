@@ -122,7 +122,7 @@ class Player(Entity):
         #cmd typing
         if self.cmdIsOn:
             if key == 'enter':
-                #-----COMMANDS-----
+                #--------------------COMMANDS--------------------
                 #this probably can be simplified, but im too lazy
                 
                 #mouse sensitivity
@@ -140,7 +140,7 @@ class Player(Entity):
                 if self.cmd.text.startswith('/vol'):
                     if(self.cmd.text[4:].isdigit()):
                         self.volume=int(self.cmd.text[4:])
-                #------------------
+                #------------------------------------------------
                 self.canMove=True
                 self.cmd.text='/'
                 self.cmdIsOn=False
