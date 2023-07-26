@@ -71,5 +71,4 @@ app.run()
 #quality0 - switch to gold_old and disable matcap shader
 #do not render blocks that are not visible
 #level of detail
-#stop player from moving when cmd is open
 #------------------------
