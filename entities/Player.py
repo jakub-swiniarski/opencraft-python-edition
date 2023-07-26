@@ -147,6 +147,9 @@ class Player(Entity):
             elif key.isalnum():
                 self.cmd.text+=key
                 self.cmd.create_background(color=rgb(0,0,0))
+            elif key == '.':
+                self.cmd.text+='.'
+                self.cmd.create_background(color=rgb(0,0,0)) #define the bg color somewhere in this file
 
     def jump(self):
         if not self.grounded:
