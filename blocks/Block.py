@@ -1,5 +1,5 @@
 from ursina import *
-from ursina.shaders import lit_with_shadows_shader 
+from ursina.shaders import lit_with_shadows_shader
 
 class Block(Entity):
     def __init__(self,x,y,z):
