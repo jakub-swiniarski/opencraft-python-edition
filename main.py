@@ -102,4 +102,9 @@ app.run()
 #quality0 - switch to gold_old and disable matcap shader
 #do not render blocks that are not visible
 #level of detail
+
+#2D ITEMS
+#ITEM LIST []
+#IN MAIN UPDATE ITEM.ROTATION=PLAYER.ROTATION
+
 #------------------------
