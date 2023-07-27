@@ -34,18 +34,12 @@ def input(key):
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
                 #play break sound
-                if str(mouse.hovered_entity).lower()=='glass':
+                if mouse.hovered_entity=='glass':
                     Audio('assets/sounds/blocks/break-glass.mp3',volume=player.volume, pitch=random.randint(8,12)/10) #turn these into functions???
                 else:
                     #temporary break sound
                     Audio('assets/sounds/blocks/place.mp3',volume=player.volume, pitch=random.randint(8,12)/10)
 
-                #particles
-                #create a class that inherits from
-                #entity and add 2d texture (quad model)
-                #make it look at the player, collide
-                #with the ground, in both lmb and rmb
-                #check if hovered entity is not a particle
                 destroy(mouse.hovered_entity)
 
                 #if u add entities, u will have to check 

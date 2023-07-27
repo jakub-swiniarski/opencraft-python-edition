@@ -10,7 +10,7 @@ class Player(Entity):
         self.currentBlock='1'
 
         #cmd
-        self.cmd = Text(text='/', scale=0, x=-0.86, y=-0.447)
+        self.cmd = Text(text='/', scale=0, x=-.86, y=-.447)
         self.cmdIsOn = False
         self.bgColor = rgb(0,0,0)
 
