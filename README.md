@@ -5,7 +5,7 @@ Numbers - choose a block <br/>
 RMB - place a block <br/>
 LMB - destroy a block <br/>
 Escape - quit <br/>
-/ - open the command line
+/ - open the command line<br/>
 
 ## Commands
 /msens - change mouse sensitivity<br/>
@@ -21,12 +21,12 @@ Example: /vol0<br/>
 Use values between 0 and 100.<br/>
 
 ## Tips
-1. If you get stuck in a block or in the ground, just jump.
+1. If you get stuck in a block or in the ground, just jump.<br/>
 
 ## Screenshots
 ### A simple house
 <img src=https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/9830a287-fa28-433b-9337-35c8ecb68db7><br/>
 ### A gold block
-<img src=https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/1d12b02f-9d46-405e-bb7a-a6fcee6f3ba8>
+<img src=https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/1d12b02f-9d46-405e-bb7a-a6fcee6f3ba8><br/>
 ### Blocks
-<img src=https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/d54e8dd3-6376-4290-9bc5-7687cf451276>
+<img src=https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/d54e8dd3-6376-4290-9bc5-7687cf451276><br/>
