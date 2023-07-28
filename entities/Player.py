@@ -2,7 +2,7 @@ from ursina import *
 
 class Player(Entity):
     def __init__(self):
-        self.cursor = Entity(parent=camera.ui, model='circle', color=color.pink, scale=.005)
+        self.xhair = Entity(parent=camera.ui, model='circle', color=rgb(0,255,0), scale=.005)
         super().__init__()
         self.speed = 5
         self.height = 2
@@ -124,22 +124,32 @@ class Player(Entity):
             if key == 'enter':
                 #--------------------COMMANDS--------------------
                 #this probably can be simplified, but im too lazy
-                
+
                 #mouse sensitivity
                 if self.cmd.text.startswith('/msens'):
                     if(self.cmd.text[6:].isdigit()):
                         self.mouse_sensitivity=float(self.cmd.text[6:])
+
                 #show/hide fps
                 elif self.cmd.text=='/fps':
                     window.fps_counter.enabled=not window.fps_counter.enabled
+
                 #change fov
                 elif self.cmd.text.startswith('/fov'):
                     if(self.cmd.text[4:].isdigit()):
                         camera.fov=float(self.cmd.text[4:])
+
                 #change volume
-                if self.cmd.text.startswith('/vol'):
+                elif self.cmd.text.startswith('/vol'):
                     if(self.cmd.text[4:].isdigit()):
                         self.volume=int(self.cmd.text[4:])
+
+                #crosshair scale
+                elif self.cmd.text.startswith('/xhairs'):
+                    if(self.cmd.text[7:].isdigit()):
+                        self.xhair.scale=float(self.cmd.text[7:])/1000
+
+                #ADD A COMMAND FOR CHANGING CROSSHAIR COLOR
                 #------------------------------------------------
                 self.canMove=True
                 self.cmd.text='/'
