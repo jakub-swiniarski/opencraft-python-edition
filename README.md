@@ -20,6 +20,9 @@ Example: /fov100<br/>
 Example: /vol0<br/>
 Use values between 0 and 100.<br/>
 
+/xhairs - change the crosshair scale<br/>
+Example: /xhairs5<br/>
+
 ## Tips
 1. If you get stuck in a block or in the ground, just jump.<br/>
 
