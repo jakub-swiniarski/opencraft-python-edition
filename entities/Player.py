@@ -149,7 +149,8 @@ class Player(Entity):
                     if(self.cmd.text[7:].isdigit()):
                         self.xhair.scale=float(self.cmd.text[7:])/1000
 
-                #ADD A COMMAND FOR CHANGING CROSSHAIR COLOR
+                #crosshair color
+                #work in progress...
                 #------------------------------------------------
                 self.canMove=True
                 self.cmd.text='/'
@@ -165,7 +166,7 @@ class Player(Entity):
                     self.cmdIsOn=False
                     self.cmd.scale=0
             elif key == 'space':
-                self.cmd.text+=' '
+                self.cmd.text+=' '  #turn these 2 lines into a function
                 self.cmd.create_background(color=self.bgColor)
             elif key.isalnum():
                 self.cmd.text+=key
