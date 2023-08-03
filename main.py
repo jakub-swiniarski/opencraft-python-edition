@@ -34,7 +34,7 @@ def input(key):
             hit_info = raycast(camera.world_position, camera.forward, distance=5)
             if hit_info.hit:
                 #play break sound
-                if mouse.hovered_entity=='glass':
+                if str(mouse.hovered_entity)=='glass':
                     Audio('assets/sounds/blocks/break-glass.mp3',volume=player.volume, pitch=random.randint(8,12)/10) #turn these into functions???
                 else:
                     #temporary break sound
