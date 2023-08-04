@@ -98,9 +98,14 @@ class Player(Entity):
             self.y -= min(self.air_time, ray.distance-.05) * time.dt * 100
             self.air_time += time.dt * .25 * self.gravity
 
+    def cmdWrite(self, key):
+        self.cmd.text+=key
+        self.cmd.create_background(color=self.bgColor)
+ 
+
     def input(self, key):
         #KEYBOARD INPUT
-        if key == 'space':
+        if key == 'space' and not self.cmdIsOn:
             self.jump()
 
         if key == 'escape':
@@ -167,18 +172,11 @@ class Player(Entity):
                     self.canMove=True
                     self.cmdIsOn=False
                     self.cmd.scale=0
-            elif key == 'space':    #stop the player from jumping when in cmd
+            elif key == 'space':
                 self.cmd.text+=' '  #turn these 2 lines into a function
                 self.cmd.create_background(color=self.bgColor)
-            elif key.isalnum():
-                self.cmd.text+=key
-                self.cmd.create_background(color=self.bgColor)
-            elif key == '.':
-                self.cmd.text+='.'
-                self.cmd.create_background(color=self.bgColor)
-            elif key == ',':
-                self.cmd.text+=','
-                self.cmd.create_background(color=self.bgColor)
+            elif key.isalnum() or key == '.' or key == ',':
+                self.cmdWrite(key)
 
     def jump(self):
         if not self.grounded:
