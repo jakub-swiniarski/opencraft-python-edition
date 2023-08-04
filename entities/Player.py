@@ -173,7 +173,7 @@ class Player(Entity):
                     self.cmdIsOn=False
                     self.cmd.scale=0
             elif key == 'space':
-                self.cmd.text+=' '  #turn these 2 lines into a function
+                self.cmd.text+=' '
                 self.cmd.create_background(color=self.bgColor)
             elif key.isalnum() or key == '.' or key == ',':
                 self.cmdWrite(key)
