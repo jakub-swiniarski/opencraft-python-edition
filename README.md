@@ -23,6 +23,9 @@ Use values between 0 and 100.<br/>
 /xhairs - change the crosshair scale<br/>
 Example: /xhairs5<br/>
 
+/xhairc - change the crosshair color<br/>
+Example: /xhairc0 0 0<br/>
+
 ## Tips
 1. If you get stuck in a block or in the ground, just jump.<br/>
 
