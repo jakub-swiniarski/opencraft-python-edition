@@ -150,7 +150,9 @@ class Player(Entity):
                         self.xhair.scale=float(self.cmd.text[7:])/1000
 
                 #crosshair color
-                #work in progress...
+                elif self.cmd.text.startswith('/xhairc'):
+                    color=self.cmd.text[7:].split(sep=None)
+                    self.xhair.color=rgb(int(color[0]),int(color[1]),int(color[2]))
                 #------------------------------------------------
                 self.canMove=True
                 self.cmd.text='/'
@@ -165,7 +167,7 @@ class Player(Entity):
                     self.canMove=True
                     self.cmdIsOn=False
                     self.cmd.scale=0
-            elif key == 'space':
+            elif key == 'space':    #stop the player from jumping when in cmd
                 self.cmd.text+=' '  #turn these 2 lines into a function
                 self.cmd.create_background(color=self.bgColor)
             elif key.isalnum():
@@ -173,6 +175,9 @@ class Player(Entity):
                 self.cmd.create_background(color=self.bgColor)
             elif key == '.':
                 self.cmd.text+='.'
+                self.cmd.create_background(color=self.bgColor)
+            elif key == ',':
+                self.cmd.text+=','
                 self.cmd.create_background(color=self.bgColor)
 
     def jump(self):
