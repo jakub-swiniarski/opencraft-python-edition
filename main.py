@@ -11,6 +11,7 @@ from blocks.Wood import Wood
 from blocks.Bricks import Bricks
 from blocks.Gold import Gold
 from blocks.Glass import Glass
+from blocks.Sand import Sand
 
 #-------------------------------------
 
@@ -75,6 +76,9 @@ def input(key):
 
                 elif player.currentBlock=='6':
                     Glass(position.x, position.y, position.z)
+
+                elif player.currentBlock=='7':
+                    Sand(position.x, position.y, position.z)
 
                 #before adding new blocks, add new numbers in player input (choosing a block)
                 #add a menu for choosing blocks

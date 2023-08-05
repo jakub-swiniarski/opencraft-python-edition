@@ -2,8 +2,9 @@ from ursina import *
 
 class Player(Entity):
     def __init__(self):
-        self.xhair = Entity(parent=camera.ui, model='circle', color=rgb(0,255,0), scale=.005)
         super().__init__()
+        self.xhair = Entity(parent=camera.ui, model='circle', color=rgb(0,255,0), scale=.005)
+        
         self.speed = 5
         self.height = 2
 
@@ -77,7 +78,6 @@ class Player(Entity):
 
             # self.position += self.direction * self.speed * time.dt
 
-
         if self.gravity:
             # gravity
             ray = raycast(self.world_position+(0,self.height,0), self.down, traverse_target=self.traverse_target, ignore=self.ignore_list)
@@ -111,7 +111,7 @@ class Player(Entity):
         if key == 'escape':
             quit()
 
-        if key in ('1', '2', '3', '4', '5', '6'):
+        if key in ('1', '2', '3', '4', '5', '6', '7'):
             self.currentBlock = key
 
         #cmd
@@ -128,7 +128,6 @@ class Player(Entity):
         if self.cmdIsOn:
             if key == 'enter':
                 #--------------------COMMANDS--------------------
-                #this probably can be simplified, but im too lazy
 
                 #mouse sensitivity
                 if self.cmd.text.startswith('/msens'):
