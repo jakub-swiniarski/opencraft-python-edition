@@ -44,10 +44,10 @@ class Player(Entity):
         self.ignore_list = [self, ]
 
         # make sure we don't fall through the ground if we start inside it
-        if self.gravity:
+        '''if self.gravity:
             ray = raycast(self.world_position+(0,self.height,0), self.down, traverse_target=self.traverse_target, ignore=self.ignore_list)
             if ray.hit:
-                self.y = ray.world_point.y
+                self.y = ray.world_point.y'''
 
     def update(self):
         self.rotation_y += mouse.velocity[0] * self.mouse_sensitivity
@@ -102,7 +102,6 @@ class Player(Entity):
         self.cmd.text+=key
         self.cmd.create_background(color=self.bgColor)
  
-
     def input(self, key):
         #KEYBOARD INPUT
         if key == 'space' and not self.cmdIsOn:
