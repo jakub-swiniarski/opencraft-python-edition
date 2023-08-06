@@ -9,22 +9,22 @@ Escape - quit <br/>
 
 ## Commands
 /msens - change mouse sensitivity<br/>
-Example: /msens100<br/>
+Example: /msens 100<br/>
 
 /fps - show/hide the FPS counter<br/>
 
 /fov - change camera FOV<br/>
-Example: /fov100<br/>
+Example: /fov 100<br/>
 
 /vol - change sound volume<br/>
-Example: /vol0<br/>
+Example: /vol 0<br/>
 Use values between 0 and 100.<br/>
 
 /xhairs - change the crosshair scale<br/>
-Example: /xhairs5<br/>
+Example: /xhairs 5<br/>
 
 /xhairc - change the crosshair color<br/>
-Example: /xhairc0 0 0<br/>
+Example: /xhairc 0 0 0<br/>
 
 ## Tips
 1. If you get stuck in a block or in the ground, just jump.<br/>
