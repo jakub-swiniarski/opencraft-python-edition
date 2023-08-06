@@ -129,32 +129,32 @@ class Player(Entity):
                 #--------------------COMMANDS--------------------
 
                 #mouse sensitivity
-                if self.cmd.text.startswith('/msens'):
-                    if(self.cmd.text[6:].isdigit()):
-                        self.mouse_sensitivity=float(self.cmd.text[6:])
+                if self.cmd.text.startswith('/msens '):
+                    if(self.cmd.text[7:].isdigit()):
+                        self.mouse_sensitivity=float(self.cmd.text[7:])
 
                 #show/hide fps
                 elif self.cmd.text=='/fps':
                     window.fps_counter.enabled=not window.fps_counter.enabled
 
                 #change fov
-                elif self.cmd.text.startswith('/fov'):
-                    if(self.cmd.text[4:].isdigit()):
-                        camera.fov=float(self.cmd.text[4:])
+                elif self.cmd.text.startswith('/fov '):
+                    if(self.cmd.text[5:].isdigit()):
+                        camera.fov=float(self.cmd.text[5:])
 
                 #change volume
-                elif self.cmd.text.startswith('/vol'):
-                    if(self.cmd.text[4:].isdigit()):
-                        self.volume=int(self.cmd.text[4:])
+                elif self.cmd.text.startswith('/vol '):
+                    if(self.cmd.text[5:].isdigit()):
+                        self.volume=int(self.cmd.text[5:])
 
                 #crosshair scale
-                elif self.cmd.text.startswith('/xhairs'):
-                    if(self.cmd.text[7:].isdigit()):
-                        self.xhair.scale=float(self.cmd.text[7:])/1000
+                elif self.cmd.text.startswith('/xhairs '):
+                    if(self.cmd.text[8:].isdigit()):
+                        self.xhair.scale=float(self.cmd.text[8:])/1000
 
                 #crosshair color
-                elif self.cmd.text.startswith('/xhairc'):
-                    color=self.cmd.text[7:].split(sep=None)
+                elif self.cmd.text.startswith('/xhairc '):
+                    color=self.cmd.text[8:].split(sep=None)
                     self.xhair.color=rgb(int(color[0]),int(color[1]),int(color[2]))
                 #------------------------------------------------
                 self.canMove=True
