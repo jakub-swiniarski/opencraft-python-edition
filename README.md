@@ -1,4 +1,4 @@
-# OpenCraft Python Edition
+# <img width=64 height=64 src="assets/logo.png"> OpenCraft Python Edition
 ## Controls
 W,S,A,D - move around <br/>
 Numbers - choose a block <br/>
