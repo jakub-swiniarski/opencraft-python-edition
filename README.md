@@ -1,4 +1,7 @@
 # <img src="https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/f9ba5617-1e4b-4234-8b6f-5570006ed84d"> OpenCraft Python Edition
+## Prerequisites:
+- python,
+- ursina engine (pip install ursina).
 ## Controls
 W,S,A,D - move around <br/>
 Numbers - choose a block <br/>
