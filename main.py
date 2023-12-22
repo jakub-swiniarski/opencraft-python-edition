@@ -44,7 +44,7 @@ def input(key):
                 destroy(mouse.hovered_entity)
 
                 #if u add entities, u will have to check 
-                #whether the player clicked on anobject 
+                #whether the player clicked on an object 
                 #that inherits the Block class
                 #in order to play the right 
 
