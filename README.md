@@ -1,7 +1,13 @@
-# <img src="https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/f9ba5617-1e4b-4234-8b6f-5570006ed84d"> OpenCraft Python Edition
+<img src="https://github.com/jakub-swiniarski/opencraft-python-edition/assets/77209709/48baf99f-f805-49ff-a4a8-55db4dd8273a" align="left" width="8%" height="8%"> 
+OpenCraft Python Edition is an open-source Minecraft Clone written in Python. <br>
+This game was built using Ursina Engine. <br>
+
+---
+
 ## Prerequisites:
 - python,
 - ursina engine (pip install ursina).
+
 ## Controls
 W,S,A,D - move around <br/>
 Numbers - choose a block <br/>
