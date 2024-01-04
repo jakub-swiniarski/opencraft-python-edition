@@ -36,10 +36,10 @@ def input(key):
             if hit_info.hit:
                 #play break sound
                 if str(mouse.hovered_entity)=='glass':
-                    Audio('assets/sounds/blocks/break-glass.mp3',volume=player.volume, pitch=random.randint(8,12)/10) #turn these into functions???
+                    Audio('assets/sounds/blocks/break-glass.ogg',volume=player.volume, pitch=random.randint(8,12)/10)
                 else:
                     #temporary break sound
-                    Audio('assets/sounds/blocks/place.mp3',volume=player.volume, pitch=random.randint(8,12)/10)
+                    Audio('assets/sounds/blocks/place.ogg',volume=player.volume, pitch=random.randint(8,12)/10)
 
                 destroy(mouse.hovered_entity)
 
@@ -89,7 +89,7 @@ def input(key):
                 #in order to play the right sound
 
                 #play place sound
-                Audio('assets/sounds/blocks/place.mp3',volume=player.volume, pitch=random.randint(8,12)/10)
+                Audio('assets/sounds/blocks/place.ogg',volume=player.volume, pitch=random.randint(8,12)/10)
 
 #GENERATE WORLD
 for i in range(21):
